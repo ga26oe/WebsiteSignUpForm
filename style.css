@@ -51,18 +51,26 @@ body {
   overflow: hidden;
 }
 
+
+
+
+
+
 .slider-wrapper {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .slider {
   display: flex;
   width: 100%;
   height: 100%;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  /* overflow-x: auto; */
+  overflow: hidden;
+  scroll-snap-type:none;
   scroll-behavior: smooth;
+  transition: transform 0.3s ease;
 }
 
 .slider::-webkit-scrollbar {
@@ -75,6 +83,8 @@ body {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  /* maybe add flex shrinu */
+  flex-shrink: 0;
 }
 
 .slider-nav {
@@ -99,6 +109,30 @@ body {
 .slider-nav a:hover {
   opacity: 1;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .formContainer {
   display: flex;
@@ -181,12 +215,12 @@ input {
 }
 
 input:focus, input:valid {
-  color: #ba1ac9;
-  border: 2px solid #ba1ac9;
+  color: #C71585;
+  border: 2px solid #C71585;
 }
 
 input:focus + .labelline, input:valid + .labelline {
-  color: #ba1ac9;
+  color: #C71585;
   font-size: 0.75em;
   top: 0;
   transform: translateY(-50%);
