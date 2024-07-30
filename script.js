@@ -44,6 +44,8 @@ navDots.forEach((dot, i) => {
     });
 });
 
+
+
 // Color Thief functionality
 const colorThief = new ColorThief();
 
