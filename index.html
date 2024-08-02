@@ -10,64 +10,96 @@
 
 <body>
     <div class="container" data-component="slideshow">
-        <section class="imageContainer" >
+        <div class="theme-switch-wrapper">
+            <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+
+        <section class="imageContainer">
             <div class="slider-wrapper">
                 <div class="slider">
-                    <img id="slide-1" src = "images/img2.jpg" alt="">
-                    <img id="slide-2" src = "images/img1.jpg" alt="">
-                    <img id="slide-3" src = "images/img6.jpg" alt="">
-                    <img id="slide-4" src = "images/img8.jpg" alt="">
-                </div>   
-            <div class="slider-nav">
-                <a href="#slide-1"></a>
-                <a href="#slide-2"></a>
-                <a href="#slide-3"></a>
-                <a href="#slide-4"></a>
-    
-            </div> 
+                    <img id="slide-1" src="images/img2.jpg" alt="">
+                    <img id="slide-2" src="images/img1.jpg" alt="">
+                    <img id="slide-3" src="images/img3.jpg" alt="">
+                    <img id="slide-4" src="images/img4.jpg" alt="">
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide-1"></a>
+                    <a href="#slide-2"></a>
+                    <a href="#slide-3"></a>
+                    <a href="#slide-4"></a>
+
+                </div>
             </div>
-        </section>   
+        </section>
 
         <div class="formContainer">
-            <div class="formBorder">
-            <form action="" method="get" class=sign-up-form-header>
-                <div class="logo">
-                    <img src="images/movie-svgrepo-com.svg" alt="" width="100px">
-                </div>
-                <div class="entryArea">
-                    <input type="text" required>
-                    <div class="labelline">Full Name</div>
-                
-                </div>
-                <div class="entryArea">
-                    <input type="text" required>
-                    <div class="labelline">Email</div>
-                </div>
-                <div class="entryArea">
-                    <input type="text" required>
-                    <div class="labelline">Spotify Link</div>
-                </div>
-                <div class="entryArea">
-                    <input type="text" required>
-                    <div class="labelline">Password</div>
-                </div>
-                <div class="entryArea">
-                    <input type="text" required>
-                    <div class="labelline">Retype Password</div>
-                </div>
 
-                <button type="submit" class = "submit-btn">
-                    Submit
-                </button>
-            </form>
+            <div class="formBorder">
+                <form action="" method="get" class=sign-up-form-header>
+
+
+                    <div class="entryArea">
+                        <input type="text" id="fullName" placeholder="" required>
+                        <div class="labelline">Full Name</div>
+
+                    </div>
+                    <div class="entryArea">
+                        <input type="email" id="email" placeholder="" required>
+                        <div class="labelline">Email</div>
+                    </div>
+                    <div class="entryArea">
+                        <input type="url" id="url" placeholder="" required>
+                        <div class="labelline">Spotify Link</div>
+                    </div>
+                    <div class="entryArea">
+                        <input type="password" id="password" placeholder="" required>
+                        <div class="labelline">Password</div>
+                        <div id="passwordRequirments" class="requirements hidden">
+                            Password must contain:
+                            <ul>
+                                <li id="uppercase">At least one uppercase letter</li>
+                                <li id="speicalChar">At least one special character</li>
+                                <li id="length">At least 8 characters long</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="entryArea">
+                        <input type="password" id="password" placeholder="" required>
+                        <div class="labelline">Retype Password</div>
+                    </div>
+                    <div id="passwordError" class="error hidden"></div>
+
+
+
+                    <div class="submitContainer">
+                        <div class="center">
+                            <button class="btn">
+                                <svg id = "submitBtn" width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                                </svg>
+                                <span>Submit</span>
+                            </button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+            <footer class="footer">
+                <p>Created by Avi for the Odin Project | <a href="https://github.com/ga26oe/WebsiteSignUpForm"
+                        target="_blank">Github Link</a> </p>
+            </footer>
         </div>
-        <footer class="footer">
-            <p>Created by Avi for the Odin Project |  <a href="#">Github Link</a>  </p>
-        </footer>
-        </div>
-        
+
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
