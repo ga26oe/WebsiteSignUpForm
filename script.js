@@ -123,9 +123,9 @@ updateColors();
 // Password validation
 
 
-/* const passwordInput = document.getElementById('password');
+const passwordInput = document.getElementById('password');
 const confirmPasswordInput = document.getElementById('confirmPassword');
-const passwordRequirements = document.getElementById('passwordRequirements');
+const passwordRequirements = document.getElementById('passwordRequirments');
 const passwordError = document.getElementById('passwordError');
 
 const uppercaseElement = document.getElementById('uppercase');
@@ -177,4 +177,3 @@ form.addEventListener('submit', (e) => {
         alert('Please check your password and try again.');
     }
 });
-*/
