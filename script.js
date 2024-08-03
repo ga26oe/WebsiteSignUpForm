@@ -138,6 +138,8 @@ function validatePassword() {
     const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
     const isLongEnough = password.length >= 8;
 
+    console.log('Password validation:', { hasUpperCase, hasSpecialChar, isLongEnough });
+
     uppercaseElement.classList.toggle('valid', hasUpperCase);
     specialCharElement.classList.toggle('valid', hasSpecialChar);
     lengthElement.classList.toggle('valid', isLongEnough);
@@ -145,9 +147,12 @@ function validatePassword() {
     return hasUpperCase && hasSpecialChar && isLongEnough;
 }
 
+
 function checkPasswordMatch() {
     const password = passwordInput.value;
     const confirmPassword = confirmPasswordInput.value;
+
+    console.log('Password match check:', password === confirmPassword);
 
     if (password !== confirmPassword) {
         passwordError.textContent = "Passwords do not match";
@@ -169,11 +174,24 @@ passwordInput.addEventListener('blur', () => {
 
 confirmPasswordInput.addEventListener('blur', checkPasswordMatch);
 
-// Form submission
+
+//Form Submission
+
 const form = document.querySelector('form');
 form.addEventListener('submit', (e) => {
-    if (!validatePassword() || !checkPasswordMatch()) {
-        e.preventDefault();
+    e.preventDefault(); // Prevent the default form submission
+    console.log('Form submitted');
+    
+    const isPasswordValid = validatePassword();
+    const doPasswordsMatch = checkPasswordMatch();
+    
+    console.log('Validation results:', { isPasswordValid, doPasswordsMatch });
+
+    if (isPasswordValid && doPasswordsMatch) {
+        console.log('Redirecting to thank-you.html');
+        window.location.href = 'thank-you.html';
+    } else {
+        console.log('Validation failed, showing alert');
         alert('Please check your password and try again.');
     }
 });

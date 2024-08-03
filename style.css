@@ -340,18 +340,17 @@ input:not(:placeholder-shown) + .labelline {
 
 
 
-.requirements {
-  font-size: .8em;
-  color: white;
-  margin-top: 5px;
+ .requirements {
+  font-size: .7em;
+  color: var(--accent);
+  margin-top: 35px;
 
-}
-
+ }
 .requirements li.valid {
   color: var(--accent);
 }
 
-.error {
+#passwordError {
     color: var(--accent);
     font-size: 0.8em;
     margin-top: 5px;

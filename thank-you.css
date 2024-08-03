@@ -1,0 +1,77 @@
+/* CSS reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /* Custom styles */
+  @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Inconsolata:wght@200..900&display=swap');
+  :root {
+  /* light mode colors */
+  
+  --background: #ddc8c8;
+  --text: #000000;
+  --primary: #000000;
+  --secondary: #2ecc71;
+  --accent: #fc71fc;
+  --form-background: #ddc8c8;
+  --form-border: #000000;
+  --slider-background: #d3caca;
+  --submitBtn: #fc71fc;
+  --svg-background: #ddc8c8;
+  --svg-accent: #fc71fc;
+  
+  }
+  
+  
+  [data-theme="dark"] {
+    --background: #23262e;
+    --text: #ffffff;
+    --primary: #c4e7f1;
+    --secondary: #38b000;
+    --accent: #cf38cf;
+    --form-background: #23262e;
+    --form-border: #f4f8fc;
+    --slider-background: #dddada;
+    --submitBtn: #cf38cf;
+    --svg-background: #232629;
+    --svg-accent: #C71585;
+  }
+
+  
+  body {
+    font-family: "Helvetica", "Arial", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--form-background);
+}
+.thank-you-container {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--form-background);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    color: var(--accent);
+}
